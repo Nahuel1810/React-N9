@@ -14,7 +14,7 @@ export default function Inicio({tareas, setTareas, eliminarPos, setEliminarPos})
       eliminarTarea(eliminarPos);
       setEliminarPos(undefined);
     }
-  },[eliminarPos]) 
+  },[eliminarPos, eliminarTarea, setEliminarPos]) 
   function eliminarTarea(indice) {
     const newtareas = tareas.filter((_, i) => i !== parseInt(indice));
     setTareas(newtareas);
